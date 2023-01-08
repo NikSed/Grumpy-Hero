@@ -112,7 +112,7 @@ RectTransform:
   - {fileID: 7957531937583575975}
   - {fileID: 7957531935940685002}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
 --- !u!95 &7957531936340890835
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -235,7 +235,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7957531937583575968
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 7957531937583575975}
   - component: {fileID: 7957531937583575973}
   - component: {fileID: 7957531937583575974}
+  - component: {fileID: 5979855188819295996}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -305,7 +306,7 @@ MonoBehaviour:
   m_text: "\u0418\u0433\u0440\u0430\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22201f7503718154faec10c7786961b2, type: 2}
-  m_sharedMaterial: {fileID: -178885147464404661, guid: 22201f7503718154faec10c7786961b2, type: 2}
+  m_sharedMaterial: {fileID: -1755058119182052268, guid: 22201f7503718154faec10c7786961b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -371,3 +372,16 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5979855188819295996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7957531937583575968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3300a7c9ab8474e44944cef70e208779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _key: 

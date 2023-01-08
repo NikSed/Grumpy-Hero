@@ -1,0 +1,35 @@
+{
+  "play": "Играть",
+  "options": "Опции",
+  "exit": "Выход",
+  "cancel": "Отмена",
+  "send": "Отправить",
+  "menu": "Меню",
+
+  //On exit touch phrases
+  "this_is_not_the_play_button": "Это не кнопка \"Играть\"...",
+  "press_the_play_button": "Нажми на кнопку \"Играть\"...",
+  "are_you_going_to_get_out": "Собрался выйти? Отлично! Ха-ха",
+  "good_riddance": "Скатертью дорога!",
+  //
+
+  "where_i_touch": "Фраза \"Куда я жмал?\" полностью тебе подходит",
+  "ok_here_your_button": "Ладно вот твоя кнопка",
+
+  //On hero touch phrases
+  "you_stupid_or_something": "Ты глупый или что-то?",
+  "poke_yourself_in_one_place": "В одно место себе потыкай!",
+  "stop_it": "Прекрати!!!",
+  "i_no_have_words": "У меня нет слов...",
+  "you_are_pissing_me_off": "Ты выводишь меня из себя!",
+  "you_look_like_smart": "На вид ты вроде бы умный...",
+  "censorship": "#@$#@#!!!!!",
+  "ellipsis": "...",
+  "what_a_fool": "Вот болван...",
+  //
+
+  "think_faster": "Думай быстрее!!!",
+
+  "another_one": "Ещё один...",
+  "just_going_to_stare": "Так и будешь пялиться?"
+}
