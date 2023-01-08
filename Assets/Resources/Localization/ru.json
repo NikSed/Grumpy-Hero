@@ -1,10 +1,12 @@
 {
   "play": "Играть",
+  "set": "Выбрать",
   "options": "Опции",
   "exit": "Выход",
   "cancel": "Отмена",
   "send": "Отправить",
   "menu": "Меню",
+  "loading": "Загрузка...",
 
   //On exit touch phrases
   "this_is_not_the_play_button": "Это не кнопка \"Играть\"...",
@@ -12,9 +14,6 @@
   "are_you_going_to_get_out": "Собрался выйти? Отлично! Ха-ха",
   "good_riddance": "Скатертью дорога!",
   //
-
-  "where_i_touch": "Фраза \"Куда я жмал?\" полностью тебе подходит",
-  "ok_here_your_button": "Ладно вот твоя кнопка",
 
   //On hero touch phrases
   "you_stupid_or_something": "Ты глупый или что-то?",
@@ -28,8 +27,19 @@
   "what_a_fool": "Вот болван...",
   //
 
+  //On skin touch phrases
+  "did_you_buy_this_skin_to_use": "Ты покупал этот скин чтобы использовать?",
+  "take_what_they_give": "Бери что дают!",
+  "just_going_to_stare": "Так и будешь пялиться?",
   "think_faster": "Думай быстрее!!!",
+  "i_wll_never_wear_that": "Я такое никогда не надену!!!",
+  //
 
-  "another_one": "Ещё один...",
-  "just_going_to_stare": "Так и будешь пялиться?"
+  "where_i_touch": "Фраза \"Куда я жмал?\" полностью тебе подходит",
+  "ok_here_your_button": "Ладно вот твоя кнопка",
+  "i_hope_no_problems_with_the_choice_of_skin": "С выбором скина надеюсь проблем не будет...",
+  "this_skin_is_beautiful": "О, да! Этот скин прекрасен.... Кхм-кхм. Бери его!",
+  "actually_there_was_no_download": "Вообще-то никакой загрузки не было. Ха-ха",
+  "just_dont_cry": "Только не заплачь! Болван!",
+  "another_one": "Ещё один..."
 }

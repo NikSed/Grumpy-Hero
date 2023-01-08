@@ -11,6 +11,7 @@ public class MessagesController : MonoBehaviour
 
     private List<string> _exitTouchPhrases;
     private List<string> _heroTouchPhrases;
+    private List<string> _skinTouchPhrases;
 
     private bool _messageIsShowing = false;
 
@@ -22,6 +23,10 @@ public class MessagesController : MonoBehaviour
 
     public int ExitTouchPhrasesCount => _exitTouchPhrases.Count;
 
+    public string SkinTouchPhrase(int index) => _skinTouchPhrases[index];
+
+    public int SkinTouchPhrasesCount => _skinTouchPhrases.Count;
+
 
     public bool NotHideMessage { get; set; } = false;
 
@@ -32,9 +37,7 @@ public class MessagesController : MonoBehaviour
 
         if (withoutQueue)
         {
-            StopCoroutine(ShowMessageBox());
-            _messageIsShowing = false;
-            _messageBox.gameObject.SetActive(false);
+            HideMessageBox();
         }
 
         NotHideMessage = notHide;
@@ -44,6 +47,14 @@ public class MessagesController : MonoBehaviour
 
         _messageText.text = text;
         StartCoroutine(ShowMessageBox());
+    }
+
+    public void HideMessageBox()
+    {
+        NotHideMessage = false;
+        StopCoroutine(ShowMessageBox());
+        _messageIsShowing = false;
+        _messageBox.gameObject.SetActive(false);
     }
 
     private void Start()
@@ -72,6 +83,15 @@ public class MessagesController : MonoBehaviour
             LocalizationManager.Instance.GetText("press_the_play_button"),
             LocalizationManager.Instance.GetText("are_you_going_to_get_out"),
             LocalizationManager.Instance.GetText("good_riddance")
+        };
+
+        _skinTouchPhrases = new List<string>()
+        {
+            LocalizationManager.Instance.GetText("did_you_buy_this_skin_to_use"),
+            LocalizationManager.Instance.GetText("take_what_they_give"),
+            LocalizationManager.Instance.GetText("just_going_to_stare"),
+            LocalizationManager.Instance.GetText("think_faster"),
+            LocalizationManager.Instance.GetText("i_wll_never_wear_that")
         };
     }
 

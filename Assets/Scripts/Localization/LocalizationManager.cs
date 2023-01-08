@@ -13,9 +13,9 @@ public class LocalizationManager : MonoBehaviour
     private Dictionary<string, string> texts = new Dictionary<string, string>();
 
     public string CurrentLanguage { get; private set; }
-
+/*
     [DllImport("__Internal")]
-    private static extern void GetCurrentLanguageExtern();
+    private static extern void GetCurrentLanguageExtern();*/
 
 
     public void GetCurrentLanguageExternHandler(string language)
