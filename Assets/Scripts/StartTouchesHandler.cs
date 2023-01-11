@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StartTouchesHandler : MonoBehaviour
@@ -125,5 +126,7 @@ public class StartTouchesHandler : MonoBehaviour
         _currentText = LocalizationManager.Instance.GetText("just_dont_cry");
         _messagesController.ShowMessage(_currentText, true, true);
         _mainMenuAnimator.SetTrigger("MovePlayer");
+        yield return new WaitForSeconds(3f);
+        SceneController.Instance.LoadGameScene();
     }
 }

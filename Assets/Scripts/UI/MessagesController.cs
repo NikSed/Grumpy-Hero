@@ -6,7 +6,8 @@ using UnityEngine;
 public class MessagesController : MonoBehaviour
 {
     [SerializeField] private Transform _messageBox;
-    [SerializeField] private TextMeshProUGUI _messageText;
+    [SerializeField] private TextMeshProUGUI _messageTextUI;
+    [SerializeField] private TextMeshPro _messageText;
     [SerializeField] private float _showingMessageTime = 3f;
 
     private List<string> _exitTouchPhrases;
@@ -45,7 +46,11 @@ public class MessagesController : MonoBehaviour
         if (_messageIsShowing)
             return;
 
-        _messageText.text = text;
+        if (_messageText != null)
+            _messageText.text = text;
+        else
+            _messageTextUI.text = text;
+
         StartCoroutine(ShowMessageBox());
     }
 
