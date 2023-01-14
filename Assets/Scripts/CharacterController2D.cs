@@ -43,7 +43,11 @@ public class CharacterController2D : MonoBehaviour
     private void Jump()
     {
         if (IsGrounded)
+        {
+            _rigidbody2D.velocity = Vector2.zero;
             _rigidbody2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            SoundManager.Instance.PlaySound("Swosh");
+        }
     }
 
     private void Move(float x)

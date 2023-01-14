@@ -13,6 +13,7 @@ public class MessagesController : MonoBehaviour
     private List<string> _exitTouchPhrases;
     private List<string> _heroTouchPhrases;
     private List<string> _skinTouchPhrases;
+    private List<string> _offensivePhrases;
 
     private bool _messageIsShowing = false;
 
@@ -27,6 +28,10 @@ public class MessagesController : MonoBehaviour
     public string SkinTouchPhrase(int index) => _skinTouchPhrases[index];
 
     public int SkinTouchPhrasesCount => _skinTouchPhrases.Count;
+
+    public string OffensivePhrases(int index) => _offensivePhrases[index];
+
+    public int OffensivePhrasesCount => _offensivePhrases.Count;
 
 
     public bool NotHideMessage { get; set; } = false;
@@ -98,10 +103,27 @@ public class MessagesController : MonoBehaviour
             LocalizationManager.Instance.GetText("think_faster"),
             LocalizationManager.Instance.GetText("i_wll_never_wear_that")
         };
+
+        _offensivePhrases = new List<string>()
+        {
+            LocalizationManager.Instance.GetText("you_stupid_or_something"),
+            LocalizationManager.Instance.GetText("stop_it"),
+            LocalizationManager.Instance.GetText("i_no_have_words"),
+            LocalizationManager.Instance.GetText("you_are_pissing_me_off"),
+            LocalizationManager.Instance.GetText("you_look_like_smart"),
+            LocalizationManager.Instance.GetText("censorship"),
+            LocalizationManager.Instance.GetText("ellipsis"),
+            LocalizationManager.Instance.GetText("what_a_fool"),
+            LocalizationManager.Instance.GetText("it_amuses_you_i_dont"),
+            LocalizationManager.Instance.GetText("why_are_you_start_the_game"),
+            LocalizationManager.Instance.GetText("just_game_off")
+        };
     }
 
     private IEnumerator ShowMessageBox()
     {
+        SoundManager.Instance.PlaySound("TEXT_SOUND_ENTER");
+
         _messageIsShowing = true;
         _messageBox.gameObject.SetActive(true);
 
@@ -112,5 +134,15 @@ public class MessagesController : MonoBehaviour
 
         _messageIsShowing = false;
         _messageBox.gameObject.SetActive(false);
+    }
+
+    private void Awake()
+    {
+        LocalizationManager.OnLanguageChange.AddListener(OnLanguageChangeHandler);
+    }
+
+    private void OnLanguageChangeHandler()
+    {
+        CreatePhrases();
     }
 }

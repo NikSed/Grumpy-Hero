@@ -112,7 +112,7 @@ RectTransform:
   - {fileID: 7957531937583575975}
   - {fileID: 7957531935940685002}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_text: "\u0418\u0433\u0440\u0430\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22201f7503718154faec10c7786961b2, type: 2}
-  m_sharedMaterial: {fileID: -1755058119182052268, guid: 22201f7503718154faec10c7786961b2, type: 2}
+  m_sharedMaterial: {fileID: 4949312375896885929, guid: 22201f7503718154faec10c7786961b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

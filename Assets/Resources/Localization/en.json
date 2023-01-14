@@ -1,8 +1,57 @@
 {
   "play": "Play",
+  "set": "Set",
   "options": "Options",
   "exit": "Exit",
   "cancel": "Cancel",
   "send": "Send",
-  "menu": "Menu"
+  "menu": "Menu",
+  "loading": "Loading...",
+  "lang": "En",
+
+  //On exit touch phrases
+  "this_is_not_the_play_button": "This is not \"Play\" button...",
+  "press_the_play_button": "Press the \"Play\" button...",
+  "are_you_going_to_get_out": "Are you going to get out? Great! Ha-ha",
+  "good_riddance": "Good riddance!",
+  //
+
+  //On hero touch phrases
+  "you_stupid_or_something": "Are you stupid or something?",
+  "poke_yourself_in_one_place": "Poke yourself in one place!",
+  "stop_it": "Stop it!!!",
+  "i_no_have_words": "I have no words...",
+  "you_are_pissing_me_off": "You're pissing me off!",
+  "you_look_like_smart": "You look like you're smart...",
+  "censorship": "#@$#@#!!!!!",
+  "ellipsis": "...",
+  "what_a_fool": "What a fool...",
+  //
+
+  //On skin touch phrases
+  "did_you_buy_this_skin_to_use": "Did you buy this skin to use?",
+  "take_what_they_give": "Take what they give!",
+  "just_going_to_stare": "Are you just going to stare?",
+  "think_faster": "Think faster!!!",
+  "i_wll_never_wear_that": "I'll never wear that!!!",
+  "help_you_last": "I'm helping you for the LAST time!!!!!!!",
+  //
+
+  "it_amuses_you_i_dont": "Does it amuse you? I'm not really!!!",
+  "why_are_you_start_the_game": "Why did you launch the game?",
+  "just_game_off": "Just turn off the game and don't embarrass yourself...",
+  "where_i_touch": "The phrase \"Where did I press?\" totally suits you",
+  "ok_here_your_button": "OKAY! Here's your button",
+  "i_hope_no_problems_with_the_choice_of_skin": "I hope there will be no problems with the choice of skin...",
+  "this_skin_is_beautiful": "Oh, yes! This skin is beautiful.... Ahem-ahem. Take him!",
+  "actually_there_was_no_download": "Actually, there was no download. Ha-ha",
+  "just_dont_cry": "Just don't cry! Blockhead",
+  "another_one": "One more...",
+  "standart_controlls": "The control is standard W, A, S, D...",
+  "ok_i_help_you": "ALL RIGHT! So I will help you...",
+  "dont_ask_why_not_animations": "Don't even ask me vhy I don't have animation",
+  "write_with_mistake": "It was intended to write with a mistake, you fool...",
+  "game_end": "Congratulations, dummy, you passed the whole game. The owner is too lazy to make levels. Ha-Ha. Good luck!",
+  "dont_jump_here": "I advise you not to jump here...",
+  "listen_my_advice": "I TOLD YOU!!!"
 }

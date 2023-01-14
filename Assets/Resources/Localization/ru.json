@@ -7,6 +7,7 @@
   "send": "Отправить",
   "menu": "Меню",
   "loading": "Загрузка...",
+  "lang": "Ru",
 
   //On exit touch phrases
   "this_is_not_the_play_button": "Это не кнопка \"Играть\"...",
@@ -33,14 +34,25 @@
   "just_going_to_stare": "Так и будешь пялиться?",
   "think_faster": "Думай быстрее!!!",
   "i_wll_never_wear_that": "Я такое никогда не надену!!!",
+  "help_you_last": "Помогаю тебе в ПОСЛЕДНИЙ раз!!!!!!!",
   //
 
+
+  "it_amuses_you_i_dont": "Тебя это веселит? Меня нет!!!",
+  "why_are_you_start_the_game": "Ты зачем игру запустил?",
+  "just_game_off": "Просто выключи игру не позорься...",
   "where_i_touch": "Фраза \"Куда я жмал?\" полностью тебе подходит",
-  "ok_here_your_button": "Ладно вот твоя кнопка",
+  "ok_here_your_button": "ЛАДНО! Вот твоя кнопка",
   "i_hope_no_problems_with_the_choice_of_skin": "С выбором скина надеюсь проблем не будет...",
   "this_skin_is_beautiful": "О, да! Этот скин прекрасен.... Кхм-кхм. Бери его!",
   "actually_there_was_no_download": "Вообще-то никакой загрузки не было. Ха-ха",
   "just_dont_cry": "Только не заплачь! Болван!",
   "another_one": "Ещё один...",
-  "standart_controlls": "Управление стандартное W, A, S, D ..."
+  "standart_controlls": "Управление стандартное W, A, S, D...",
+  "ok_i_help_you": "ЛАДНО! Так и быть помогу...",
+  "dont_ask_why_not_animations": "Даже не спрашивай почму у меня нет анимаций",
+  "write_with_mistake": "Написать с ошибкой было задумано, болван...",
+  "game_end": "Поздравляю, болван, ты прошёл всю игру. Хозяину лень делать уровни. Ха-Ха. Удачи!",
+  "dont_jump_here": "Советую здесь лучше не прыгать...",
+  "listen_my_advice": "ГОВОРИЛ ЖЕ!!!"
 }

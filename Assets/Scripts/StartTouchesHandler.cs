@@ -13,12 +13,20 @@ public class StartTouchesHandler : MonoBehaviour
     [SerializeField] private Animator _mainMenuAnimator;
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private RectTransform _playerTransform;
+    [SerializeField] private Image _playerImage;
 
     private int _onHeroTouchesCount = 0;
     private int _totalTouchesCount = 0;
 
     private string _currentText = string.Empty;
     private bool _isLoading = false;
+    private bool _isSkinsWindowOpen = false;
+    private bool _isTouchBlocked = false;
+
+    public void PlaySwashSound()
+    {
+        SoundManager.Instance.PlaySound("Swosh");
+    }
 
     public void OnHeroTouch()
     {
@@ -27,6 +35,9 @@ public class StartTouchesHandler : MonoBehaviour
             _isLoading = false;
             return;
         }
+
+        if (_isTouchBlocked)
+            return;
 
         _onHeroTouchesCount++;
 
@@ -38,10 +49,12 @@ public class StartTouchesHandler : MonoBehaviour
 
     public void OnPlayButtonTouch()
     {
+        _isSkinsWindowOpen = false;
+        _playerImage.color = Color.white;
         _messagesController.HideMessageBox();
         _mainMenuAnimator.SetTrigger("ShowSkins");
         _currentText = LocalizationManager.Instance.GetText("i_hope_no_problems_with_the_choice_of_skin");
-        Invoke(nameof(BaseTouch), 0.5f);
+        BaseTouch();
     }
 
     public void OnExitButtonTouch()
@@ -92,27 +105,39 @@ public class StartTouchesHandler : MonoBehaviour
 
         if (_totalTouchesCount == _minTouchesForPlayButtonActivate - 1)
         {
+            _playerImage.color = Color.red;
+            _isSkinsWindowOpen = true;
+            _messagesController.HideMessageBox();
             _currentText = LocalizationManager.Instance.GetText("ok_here_your_button");
-            _messagesController.ShowMessage(_currentText, true, true);
             Invoke(nameof(ShowPlayButton), 2f);
+            _messagesController.ShowMessage(_currentText, true, true);
+            return;
         }
 
-        _messagesController.ShowMessage(_currentText);
+        if (_isSkinsWindowOpen)
+            return;
+
+        _messagesController.HideMessageBox();
+        _messagesController.ShowMessage(_currentText, true, true);
     }
 
     private void ShowPlayButton()
     {
+        PlaySwashSound();
         _playButton.gameObject.SetActive(true);
     }
 
     private IEnumerator Loading()
     {
+        SoundManager.Instance.PlayMusic("Secret_CatDance");
+
         while (_loadingWaitingTime > 0 && _isLoading)
         {
             _loadingWaitingTime -= Time.deltaTime;
             yield return null;
         }
 
+        SoundManager.Instance.StopAllMusics();
         _playerAnimator.SetBool("isRuning", false);
         _currentText = LocalizationManager.Instance.GetText("actually_there_was_no_download");
         BaseTouch();
@@ -121,12 +146,15 @@ public class StartTouchesHandler : MonoBehaviour
 
     private IEnumerator MovePlayer()
     {
+        _isTouchBlocked = true;
+
         yield return new WaitForSeconds(3f);
         _playerAnimator.SetBool("isRuning", true);
         _currentText = LocalizationManager.Instance.GetText("just_dont_cry");
+        _messagesController.HideMessageBox();
         _messagesController.ShowMessage(_currentText, true, true);
         _mainMenuAnimator.SetTrigger("MovePlayer");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         SceneController.Instance.LoadGameScene();
     }
 }

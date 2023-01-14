@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LocalizationManager : MonoBehaviour
 {
@@ -12,11 +13,12 @@ public class LocalizationManager : MonoBehaviour
 
     private Dictionary<string, string> texts = new Dictionary<string, string>();
 
-    public string CurrentLanguage { get; private set; }
-/*
-    [DllImport("__Internal")]
-    private static extern void GetCurrentLanguageExtern();*/
+    public static UnityEvent OnLanguageChange = new UnityEvent();
 
+    public string CurrentLanguage { get; private set; }
+    /*
+        [DllImport("__Internal")]
+        private static extern void GetCurrentLanguageExtern();*/
 
     public void GetCurrentLanguageExternHandler(string language)
     {
@@ -26,12 +28,27 @@ public class LocalizationManager : MonoBehaviour
             CurrentLanguage = language;
     }
 
+    public void SetRuLanguage()
+    {
+        Languages.DefaultLanguages newLanguage = Languages.DefaultLanguages.ru;
+
+        SetLanguage(newLanguage);
+    }
+
+    public void SetEnLanguage()
+    {
+        Languages.DefaultLanguages newLanguage = Languages.DefaultLanguages.en;
+
+        SetLanguage(newLanguage);
+    }
+
     public void SetLanguage(Languages.DefaultLanguages newLanguage)
     {
         if (newLanguage.ToString() != CurrentLanguage)
         {
             CurrentLanguage = newLanguage.ToString();
             LoadLocalization();
+            OnLanguageChange.Invoke();
         }
         else
         {
